@@ -1,0 +1,117 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.featured-collection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+.featured-collection__left-area, 
+.featured-collection__left-area img {
+  max-width: 100%;
+}
+
+.featured-collection__right-area {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featured-collection__right-area-info {
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-collection__right-area-header {
+  font-family: ITC Avant Garde Gothic Pro;
+  font-size: 31px;
+  font-weight: 700;
+  line-height: 41px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 12px;
+  color: #000000;
+}
+.featured-collection__right-area-subtitle {
+  font-family: Avenir;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  margin-bottom: 32px;
+  text-align: left;
+  color: #666666;
+}
+.featured-collection__right-area-link {
+  width: 100%;
+  margin-bottom: 68px;
+}
+.featured-collection__right-area-link a {
+  font-family: Avenir;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-decoration: none;
+  color: #000000;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #000;
+}
+
+.product-container {
+  max-width: 230px;
+  img {
+    max-width: 230px;
+  }
+}
+
+.product-name {
+  font-family: Avenir;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 4px;
+}
+
+.product-price {
+  font-family: Avenir;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.product-price-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product-color {
+  ul {
+    display: flex;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    li {
+      list-style: none;
+      background-color: red;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid #000;
+    }
+  }
+}
+
+.featured-collection__right-area-products {
+  display: flex;
+  gap: 32px;
+}
+
