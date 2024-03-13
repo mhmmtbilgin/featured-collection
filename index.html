@@ -11,9 +11,7 @@
 
 <body>
   <div class="featured-collection">
-    <div class="featured-collection__left-area">
-      <img src="./assets/images/featured-collection-bg.svg" alt="left-background-image" />
-    </div>
+    <div class="featured-collection__left-area"></div>
     <div class="featured-collection__right-area">
       <div class="featured-collection__right-area-info">
         <h1 class="featured-collection__right-area-header">Everyday items, we have something to suit every occasion.
@@ -25,8 +23,8 @@
         <div class="featured-collection__right-area-link">
           <a href="#">Shop all everyday items</a>
         </div>
-        <div id="productList" class="featured-collection__right-area-products">
-        </div>
+      </div>
+      <div id="productList" class="featured-collection__right-area-products">
       </div>
       <div></div>
     </div>
@@ -34,3 +32,44 @@
 </body>
 
 </html>
+
+<script>
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+  const productsSlide = document.querySelector('#productList');
+
+  const end = () => {
+    isDown = false;
+    productsSlide.classList.remove('active');
+  }
+
+  const start = (e) => {
+    isDown = true;
+    productsSlide.classList.add('active');
+    startX = e.pageX || e.touches[0].pageX - productsSlide.offsetLeft;
+    scrollLeft = productsSlide.scrollLeft;
+  }
+
+  const move = (e) => {
+    if (!isDown) return;
+
+    e.preventDefault();
+    const x = e.pageX || e.touches[0].pageX - productsSlide.offsetLeft;
+    const dist = (x - startX);
+    productsSlide.scrollLeft = scrollLeft - dist;
+  }
+
+  (() => {
+    productsSlide.addEventListener('mousedown', start);
+    productsSlide.addEventListener('touchstart', start);
+
+    productsSlide.addEventListener('mousemove', move);
+    productsSlide.addEventListener('touchmove', move);
+
+    productsSlide.addEventListener('mouseleave', end);
+    productsSlide.addEventListener('mouseup', end);
+    productsSlide.addEventListener('touchend', end);
+  })();
+
+</script>
