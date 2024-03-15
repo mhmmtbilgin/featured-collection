@@ -8,7 +8,6 @@ const mobileMediaQuery = 800;
 
 function handleScreenSizeChange(products, index) {
   if (window.innerWidth < mobileMediaQuery) {
-    console.log("gir", products);
     return products[index].mobileName;
   } else {
     return products[index].name;
