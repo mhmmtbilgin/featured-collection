@@ -1,0 +1,16 @@
+:root {
+  /** Color **/
+  --font-size: 16px;
+  --gray: #666666;
+  --black: #000000;
+  --rock-blue: #99C3CC;
+  --eunry: #CC9999;
+  --east-side: #CB99CC;
+  --sprout: #BCD9B2;
+  --white: #FFFFFF;
+  --opacity-black: #0000001A;
+
+  /** Font Family **/
+  --avenir: Avenir;
+  --general-font:'ITC Avant Garde Gothic Pro', sans-serif;
+}

@@ -1,3 +1,4 @@
+@import url("variable.css");
 body {
   padding: 0;
   margin: 0;
@@ -8,6 +9,7 @@ body {
   grid-template-columns: 50% 50%;
   height: 100vh;
 }
+
 .featured-collection__left-area {
   background: url("../images/featured-collection-bg.svg") no-repeat;
   background-size: cover;
@@ -15,7 +17,7 @@ body {
 }
 
 .featured-collection__right-area {
-  background-color: white;
+  background-color: var(--white);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,40 +31,43 @@ body {
 }
 
 .featured-collection__right-area-header {
-  font-family: ITC Avant Garde Gothic Pro;
+  font-family: var(--general-font);
   font-size: 31px;
   font-weight: 700;
   line-height: 41px;
   letter-spacing: 0em;
   text-align: left;
   margin-bottom: 12px;
-  color: #000000;
+  color: var(--black);
 }
+
 .featured-collection__right-area-subtitle {
-  font-family: Avenir;
+  font-family: var(--avenir);
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
   letter-spacing: 0em;
   margin-bottom: 32px;
   text-align: left;
-  color: #666666;
+  color: var(--gray);
 }
+
 .featured-collection__right-area-link {
   width: 100%;
   margin-bottom: 68px;
 }
+
 .featured-collection__right-area-link a {
-  font-family: Avenir;
+  font-family: var(--avenir);
   font-size: 13px;
   font-weight: 900;
   line-height: 17px;
   letter-spacing: 0em;
   text-align: left;
   text-decoration: none;
-  color: #000000;
+  color: var(--black);
   padding-bottom: 5px;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--black);
 }
 
 .product-container {
@@ -73,7 +78,7 @@ body {
 }
 
 .product-name {
-  font-family: Avenir;
+  font-family: var(--avenir);
   font-size: 13px;
   font-weight: 400;
   line-height: 20px;
@@ -83,18 +88,20 @@ body {
 }
 
 .product-price {
-  font-family: Avenir;
+  font-family: var(--avenir);
   font-size: 13px;
   font-weight: 500;
   line-height: 20px;
   letter-spacing: 0em;
   text-align: center;
 }
+
 .product-price-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .product-color {
   ul {
     display: flex;
@@ -104,7 +111,7 @@ body {
     li {
       position: relative;
       list-style: none;
-      background-color: #99C3CC;
+      background-color: var(--rock-blue);
       width: 12px;
       height: 12px;
       border-radius: 50%;
@@ -113,9 +120,8 @@ body {
       padding: 2px;
       width: 10px;
       height: 10px;
-      border: 1px solid #fff;
+      border: 1px solid var(--white);
       box-sizing: border-box;
-      
     }
     .selected::before {
       content: '';
@@ -125,16 +131,16 @@ body {
       right: -3px;
       bottom: -3px;
       border-radius: 50%;
-      border: 1px solid #000;
+      border: 1px solid var(--black);
     }
     .brown {
-      background-color: #CC9999;
+      background-color: var(--eunry);
     }
     .pink {
-      background: #CB99CC;
+      background: var(--east-side);
     }
     .green {
-      background: #BCD9B2;
+      background: var(--sprout);
     }
   }
 }
@@ -155,6 +161,17 @@ body {
   &::-webkit-scrollbar {
     display: none;
   }
+
+  .right-chevron {
+    position: fixed;
+    right: 48px;
+    background: url("../images/chevron-right.svg") no-repeat center;
+    width: 16px;
+    height: 16px;
+    padding: 12px;
+    bottom: 34%;
+    border: 1px solid var(--opacity-black);
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -163,12 +180,14 @@ body {
     height: 100%;
     position: relative;
   }
+
   .featured-collection__right-area-header {
     font-size: 20px;
     font-weight: 700;
     line-height: 26px;
-    color: #fff;
+    color: var(--white);
   }
+
   .featured-collection__products-container {
     max-width: 90%;
     min-width: 340px;
@@ -179,20 +198,29 @@ body {
     padding-right: 15px;
     position: absolute;
     top: -40px;
+
+    .right-chevron {
+      display: none;
+    }
   }
+
   .product-container {
     max-width: 148px;
+    
     img {
       max-width: 148px;
     }
   }
+
   .featured-collection__right-area-link a {
-    color: #fff;
-    border-bottom: 1px solid #fff;
+    color: var(--white);
+    border-bottom: 1px solid var(--white);
   }
+
   .featured-collection__right-area-subtitle {
     display: none;
   }
+
   .featured-collection__right-area-info {
     max-width: 260px;
     position: absolute;
@@ -200,17 +228,20 @@ body {
     left: 24px;
     margin-left: 0;
   }
+
   .featured-collection__left-area {
     min-width: 379px;
     max-width: 100%;
     width: 100%;
     min-height: 437px;
   }
+
   .featured-collection {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     position: relative;
   }
+
   .product-price-container {
     align-items: flex-start;
     flex-direction: column;
