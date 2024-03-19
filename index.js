@@ -1,7 +1,29 @@
 const products = [
-  { id: 1, name: '365 Signature Hoodie', mobileName: "Organic Skinny High Waist Raw Hem Jeans", price: 33.95, currency: "€", image:"./assets/images/product-image/product-1.png", color: "green" },
-  { id: 2, name: 'Organic Skinny High Waist Jeans', mobileName: "Organic Skinny High Waist Raw Hem Jeans", price: 33.95, currency: "€", image:"./assets/images/product-image/product-2.png", color: "cream" },
-  { id: 3, name: 'Organic Skinny High Waist Jeans', mobileName: "Organic Skinny High Waist Raw Hem Jeans", price: 33.95, currency: "€", image:"./assets/images/product-image/product-3.png", color: "blue" },
+  { 
+    id: 1,
+    name: '365 Signature Hoodie',
+    mobileName: "Organic Skinny High Waist Raw Hem Jeans",
+    price: 33.95, currency: "€",
+    image:"./assets/images/product-image/product-1.png",
+    color: "green"
+  },
+  {
+    id: 2,
+    name: 'Organic Skinny High Waist Jeans',
+    mobileName: "Organic Skinny High Waist Raw Hem Jeans",
+    price: 33.95, currency: "€",
+    image:"./assets/images/product-image/product-2.png",
+    color: "cream"
+  },
+  {
+    id: 3,
+    name: 'Organic Skinny High Waist Jeans',
+    mobileName: "Organic Skinny High Waist Raw Hem Jeans",
+    price: 33.95,
+    currency: "€",
+    image:"./assets/images/product-image/product-3.png",
+    color: "blue"
+  },
 ];
 
 const mobileMediaQuery = 800;
